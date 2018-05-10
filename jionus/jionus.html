@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="./css/jionus.css">
+<aside>
+    <img src="./images/jionus/banner.png" width="100%" alt="">
+    <div class="headertext">
+        <p>在这里，让我们开始建立联系</p>
+        <hgroup>Here, let's start building connections</hgroup>
+    </div>
+</aside>
+<article class="jionusform">
+    <form autocomplete="on" novalidate="" id="jionesform">
+        <p>
+            <input type="text" name="username" placeholder="姓名"><input type="text" name="theme" placeholder="主题"><span>请输入正确的姓名！</span><span>请输入主题！</span>
+        </p>
+        <p>
+            <input type="text" name="email" placeholder="邮箱"><textarea name="content" rows="6" maxlength="2000" placeholder="内容"></textarea><span>请输入正确的邮箱！</span><span>请输入内容信息！</span>
+        </p>
+        <p>
+            <input type="text" name="tel" placeholder="电话"><span>请输入正确的手机号码！</span>
+        </p>
+        <p>
+            <input type="text" name="firm" placeholder="公司">
+            <span>请输入公司名称！</span>
+        </p>
+
+    </form>
+    <p>
+        <input id="jionesbuttom" type="button" value="立即发送">
+    </p>
+</article>
+<script>
+    const formValdation=function () {}
+    formValdation.prototype={
+        username:0,//表单状态0错误状态1可提交状态
+        email:0,
+        tel:0,
+        firm:0,//公司
+        theme:0,//主题
+        content:0,//内容
+        isName:function (str) {
+            let rel=/^[\u4e00-\u9fa5]{2,4}$/;
+            return rel.test(str);
+        },
+        isEmail:function (str) {
+            let rel=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            return rel.test(str);
+        },
+        isTel:function (str) {
+            let rel=/^1[34578]\d{9}$/;
+            return rel.test(str);
+        },
+
+    }
+    $(document).ready(function () {
+        let jionusFrom=new formValdation();
+        $("#jionesform input").change(function () {
+            let name= this.name;
+            let thisVal = $(this).val().replace(/\s+/g,"");
+            console.log(thisVal);
+            console.log("++++");
+            if (name=='email') {
+                if (jionusFrom.isEmail(thisVal)&&thisVal!='') {
+                    jionusFrom.email=1;
+                    $(this).parent("p").find("span:eq(0)").hide();
+                }else{
+                    jionusFrom.email=0;
+                    $(this).parent("p").find("span:eq(0)").show();
+                }
+            }
+            if (name=='username'){
+                if (jionusFrom.isName(thisVal)&&thisVal!='') {
+                    jionusFrom.username=1;
+                    $(this).parent("p").find("span:eq(0)").hide();
+                }else{
+                    jionusFrom.username=0;
+                    $(this).parent("p").find("span:eq(0)").show();
+                }
+            }
+            if (name=='tel'){
+                if (jionusFrom.isTel(thisVal)&&thisVal!='') {
+                    jionusFrom.tel=1;
+                    $(this).parent("p").find("span:eq(0)").hide();
+                }else{
+                    jionusFrom.tel=0;
+                    $(this).parent("p").find("span:eq(0)").show();
+                }
+            }
+            if(name=='firm'){
+                if (thisVal!=''){
+                    jionusFrom.firm=1;
+                    $(this).parent("p").find("span:eq(0)").hide();
+                } else {
+                    jionusFrom.firm=0;
+                    $(this).parent("p").find("span:eq(0)").show();
+                }
+            }if (name=='theme'){
+                if (thisVal!=''){
+                    jionusFrom.theme=1;
+                    $(this).parent("p").find("span:eq(1)").hide();
+                } else {
+                    jionusFrom.theme=0;
+                    $(this).parent("p").find("span:eq(1)").show();
+                }
+            }
+
+        });
+        $("#jionesform textarea").change(function () {
+            let text=$(this).val().replace(/\s+/g,"");
+            if (text!=''){
+                jionusFrom.content=1;
+                $(this).parent("p").find("span:eq(1)").hide();
+            } else {
+                jionusFrom.content=0;
+                $(this).parent("p").find("span:eq(1)").show();
+            }
+        });
+        $("#jionesbuttom").click(function () {
+            if (jionusFrom.username==0){
+                $("#jionesform input[name='username']:eq(0)").parent().find('span:eq(0)').show();
+            }
+            if (jionusFrom.email==0){
+                $("#jionesform input[name='email']:eq(0)").parent().find('span:eq(0)').show();
+            }
+            if (jionusFrom.tel==0){
+                $("#jionesform input[name='tel']:eq(0)").parent().find('span:eq(0)').show();
+            }
+            if (jionusFrom.firm==0){
+                $("#jionesform input[name='firm']:eq(0)").parent().find('span:eq(0)').show();
+            }
+            if (jionusFrom.theme==0){
+                $("#jionesform input[name='theme']:eq(0)").parent().find('span:eq(1)').show();
+            }
+            if (jionusFrom.content==0){
+                $("#jionesform textarea[name='content']:eq(0)").parent().find('span:eq(1)').show();
+            }
+            if (jionusFrom.username==1&&jionusFrom.tel==1&&jionusFrom.email==1&&jionusFrom.firm==1&&jionusFrom.theme==1&&jionusFrom.content==1){
+                console.log("验证通过，继续操作");
+            }
+        });
+    });
+
+</script>

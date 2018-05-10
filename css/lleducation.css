@@ -1,0 +1,221 @@
+aside {
+    position: relative;
+    width: 100%;
+    min-width: 1024px;
+}
+
+aside > img {
+    width: 100%;
+    min-width: 1024px;
+}
+
+.headertext {
+    position: absolute;
+    width: auto;
+    height: 60px;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.headertext > p {
+    height: 39px;
+    line-height: 39px;
+    top: 37%;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.headertext > hgroup {
+    margin-top: 9px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.articlea {
+    width: 68%;
+    min-width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.artip {
+    margin: 66px 0 66px 40px;
+    font-size: 14px;
+    font-family: "MicrosoftYaHei";
+    color: #999999;
+}
+
+.artip > i {
+    display: inline-block;
+    width: 7px;
+    height: 12px;
+    background: url("../images/bit/jiantou.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.lledar {
+    position: relative;
+    min-width: 1024px;
+}
+
+.lledar > figure {
+    display: inline-block;
+    width: 50%;
+}
+
+.lledar > figure:nth-child(2) {
+    float: right;
+}
+
+.lledar > figure > span {
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+}
+
+.icon-jianjie {
+    color: #148eff;
+}
+
+.icon-yuanjing {
+    color: #01c5cc;
+}
+
+.lledar > figure > figcaption {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.lledar > figure > figcaption > p {
+    height: 30px;
+    line-height: 30px;
+    margin: 20px auto 0;
+    padding: 0 40px;
+    font-size: 12px;
+    color: #999999;
+    text-align: left;
+    text-indent: 24px;
+}
+
+.course {
+    margin-top: 140px;
+    width: 100%;
+}
+
+article > h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #1a1a1a;
+    font-weight: 100;
+}
+
+article > hgroup {
+    margin: 8px auto 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
+
+.course > fieldset {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 55px;
+    margin-bottom: 60px;
+    background-color: #f6f6f6;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+
+.course > fieldset > div {
+    line-height: 55px;
+}
+
+.courseps {
+    position: absolute;
+    top: -25px;
+    left: 34px;
+}
+
+.courseps > span:nth-child(1) {
+    font-size: 30px;
+    color: #282828;
+}
+
+.courseps > span:nth-child(2) {
+    font-size: 20px;
+    color: #666666;
+}
+
+.professor {
+    display: flex;
+    width: 100%;
+    min-width: 1024px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    /*flex-basis: 16.6%;*/
+}
+
+.professor > a {
+    width: 16.6%;
+    margin-top: 50px;
+}
+
+.professor > a > figure > div {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.professor > a > figure > div > img {
+    width: 80px;
+    height: 80px;
+}
+
+.professor > a > figure > figcaption {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.professor > a > figure > figcaption > p {
+    font-size: 16px;
+    color: #282828;
+}
+
+.professor > a > figure > figcaption > hgroup {
+    margin-top: 9px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.courseleft {
+    margin-right: 80px;
+}
+
+.tel {
+    text-align: center;
+}
+
+.tel > h1 {
+    font-size: 40px;
+    color: #1a1a1a;
+}
+
+.tel > hgroup {
+    font-size: 14px;
+    color: #999999;
+}

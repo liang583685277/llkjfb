@@ -1,0 +1,116 @@
+aside {
+    position: relative;
+    width: 100%;
+    min-width: 1024px;
+}
+aside>img{
+    width: 100%;
+    min-width: 1024px;
+}
+.headertext{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -30px;
+    text-align: center;
+}
+.headertext > p {
+    height: 39px;
+    line-height: 39px;
+    top: 37%;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.headertext > hgroup {
+    margin-top: 9px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.jionusform {
+    width: 900px;
+    height: auto;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+.jionusform > form > p {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.jionusform input {
+    width: 400px;
+    height: 50px;
+    padding: 0 0 0 20px;
+    font-size: 16px;
+    color: #282828;
+    background-color: #f6f6f6;
+    border: none;
+}
+
+.jionusform input:nth-child(2) {
+    margin-left: 100px;
+}
+
+.jionusform textarea {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    padding: 17px 0 0 20px;
+    top: 0;
+    left: 500px;
+    font-size: 16px;
+    color: #282828;
+    background-color: #f6f6f6;
+    border: none;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+#jionesform span{
+    display: none;
+    position: absolute;
+    width: auto;
+    height: 16px;
+    padding-left: 22px;
+    top: 60px;
+    left: 0;
+    line-height: 16px;
+    color: #ff0000;
+    font-size: 12px;
+}
+.jionusform span:before{
+    content:url("../images/jionus/cuowu1tixing.png");
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+}
+#jionesform>p:nth-child(1)>span:nth-child(4){
+    display: none;
+    top: 60px;
+    left: 500px;
+}
+#jionesform>p:nth-child(2)>span:nth-child(4){
+    display: none;
+    top: 260px;
+    left: 500px;
+}
+
+#jionesbuttom {
+    width: 900px;
+    height: 50px;
+    background-color: #148EFF;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}

@@ -1,0 +1,129 @@
+body {
+    font-family: "MicrosoftYaHei";
+    height: 100%;
+}
+body, dl, dd, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+/*::-webkit-scrollbar{*/
+    /*display:none;*/
+/*}*/
+
+ol, ul, li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+a{
+    text-decoration: none;
+    color:rgba(255,255,255,1);
+}
+header{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+    height: 76px;
+    background-color: #272a2d;
+}
+.logo{
+    display: inline-block;
+    padding: 25px 0 25px 10%;
+}
+nav{
+    display: inline-block;
+    float: right;
+    width: 45%;
+    margin-top: 0;
+}
+nav>a{
+    display: inline-block;
+    padding: 31px 0 13px 0;
+    margin: 0 4%;
+    font-size: 14px;
+}
+nav>a:last-child{
+    margin-right: 0;
+}
+a{
+    text-decoration: none;
+    color: #999999;
+}
+.selectnava,nav>a:hover{
+    border-bottom: solid #1bf7ff 4px;
+    color: #ffffff;
+}
+
+footer{
+    position: relative;
+    clear: both;
+    width:100%;
+    min-width: 1024px;
+    /*height:359px;*/
+    background-color:#272A2D;
+    color: #ffffff;
+    overflow: hidden;
+}
+footer>ul{
+    width: 71.6%;
+    min-width: 900px;
+    margin: 0 auto;
+}
+footer>ul>li{
+    /*display: table-cell;*/
+    float: left;
+    width: 20%;
+}
+footer>ul>li:nth-child(3){
+    width: 30%;
+}
+footer>ul>li:nth-child(4){
+    width: 30%;
+}
+footer figure{
+    display: inline-block;
+    width: 40%;
+}
+footer figure:nth-child(3){
+    float: right;
+}
+footer>ul>li>h3{
+    padding: 70px 0 28px 0;
+    font-size: 18px;
+    color: #cccccc;
+}
+footer>ul>li>p,footer>ul>li>hgroup{
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #999999;
+}
+footer>ul>li>p>span{
+    color: #1BF7FF;
+}
+footer>p{
+    clear: both;
+    width: 71.6%;
+    min-width: 900px;
+    margin: 0 auto 3%;
+    color: #999999;
+    font-size: 12px;
+}
+footer figcaption{
+    font-size: 14px;
+    color: #999999;
+}
+footer img{
+    width: 100%;
+    min-width: 80%;
+    /*height: auto;*/
+}
